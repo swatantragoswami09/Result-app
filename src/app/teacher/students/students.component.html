@@ -1,0 +1,33 @@
+<a
+  routerLink="/teacher/students/create"
+  class="btn"
+  style="float: right; margin-top: 20px"
+  >Add Student</a
+>
+<table>
+  <thead>
+    <tr>
+      <th>Roll no</th>
+      <th>Name</th>
+      <th>DOB</th>
+      <th>Score</th>
+      <th>action</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: center">
+    <tr *ngFor="let student of students">
+      <td>{{ student.rollno }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.dob }}</td>
+      <td>{{ student.score }}</td>
+      <td>
+        <a [routerLink]="['/teacher/students/', student.id, 'edit']" class="btn"
+          >Edit</a
+        >
+        <button class="btn btn-del" (click)="studentDel(student.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

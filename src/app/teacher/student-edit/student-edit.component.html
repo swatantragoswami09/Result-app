@@ -1,0 +1,15 @@
+<form [formGroup]="form" (submit)="submit()">
+  <label>Roll no</label>
+  <input type="text" name="rollno" formControlName="rollno" />
+
+  <label>Name</label>
+  <input type="text" name="name" formControlName="name" />
+
+  <label>DOB</label>
+  <input type="text" name="dob" formControlName="dob" />
+
+  <label>Score</label>
+  <input type="text" name="score" formControlName="score" />
+
+  <button type="submit">Save</button>
+</form>

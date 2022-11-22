@@ -1,0 +1,15 @@
+<form (submit)="submit()">
+  <label>Roll no</label>
+  <input type="text" name="rollno" [(ngModel)]="rollno" />
+
+  <label>Name</label>
+  <input type="text" name="name" [(ngModel)]="name" />
+
+  <label>DOB</label>
+  <input type="text" name="dob" [(ngModel)]="dob" />
+
+  <label>Score</label>
+  <input type="text" name="score" [(ngModel)]="score" />
+
+  <button type="submit">Add Student</button>
+</form>

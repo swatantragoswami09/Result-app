@@ -1,0 +1,42 @@
+<div class="nav-bar">
+  <div class="title">Result management Application</div>
+</div>
+
+<div
+  style="
+    margin-left: 500px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  "
+>
+  Find Result
+</div>
+
+<div class="input-group mb-3" style="margin-left: 100px; margin-right: 100px">
+  <form (submit)="submit()">
+    <div class="form-group">
+      <label for="rollno">Roll no</label>
+      <input
+        type="text"
+        class="form-control-plaintext"
+        name="rollno"
+        placeholder="Roll no"
+        [(ngModel)]="rollno"
+      />
+    </div>
+    <div class="form-group">
+      <label for="Name">DOB</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        placeholder="DOB"
+        [(ngModel)]="name"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-primary">Clear</button>
+  </form>
+</div>

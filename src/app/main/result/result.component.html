@@ -1,0 +1,47 @@
+<div class="nav-bar">
+  <div class="title center">Result management Application</div>
+  <ul class="top-nav">
+    <li>
+      <a href="">Logout</a>
+    </li>
+  </ul>
+</div>
+
+<button routerLink="/student">Back</button>
+<body>
+  <h1 style="color: green">Result</h1>
+
+  <div class="center">
+    <div *ngFor="let student of students">
+      <div *ngIf="id == student.id">
+        <h1>Roll no: {{ student.rollno }}</h1>
+        <br />
+        <h1>Name : {{ student.name }}</h1>
+        <br />
+        <h1>DOB : {{ student.dob }}</h1>
+        <br />
+        <h1>Score : {{ student.score }}</h1>
+        <br />
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Roll no</th>
+      <th>Name</th>
+      <th>DOB</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: center">
+    <tr *ngFor="let student of students">
+      <td *ngIf="id == student.id">{{ student.rollno }}</td>
+      <td *ngIf="id == student.id">{{ student.name }}</td>
+      <td *ngIf="id == student.id">{{ student.dob }}</td>
+      <td *ngIf="id == student.id">{{ student.score }}</td>
+    </tr>
+  </tbody>
+</table> -->
